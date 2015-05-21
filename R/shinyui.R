@@ -55,7 +55,7 @@ renderPage <- function(ui, connection, showcase=0) {
   writeLines(c('<!DOCTYPE html>',
                '<html>',
                '<head>',
-               '  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>',
+               '  <meta http-equiv="Content-Type" content="application/json; charset=utf-8"/>',
                sprintf('  <script type="application/shiny-singletons">%s</script>',
                        paste(result$singletons, collapse = ',')
                ),
