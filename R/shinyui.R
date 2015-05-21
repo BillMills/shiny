@@ -52,8 +52,7 @@ renderPage <- function(ui, connection, showcase=0) {
   depHtml <- renderDependencies(deps, "href")
 
   # write preamble
-  writeLines(c('<!DOCTYPE html>',
-               '<html>',
+  writeLines(c('<html>',
                '<head>',
                '  <meta http-equiv="Content-Type" content="application/json; charset=utf-8"/>',
                sprintf('  <script type="application/shiny-singletons">%s</script>',
