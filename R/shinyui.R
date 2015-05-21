@@ -30,8 +30,8 @@ renderPage <- function(ui, connection, showcase=0) {
     ui <- showcaseUI(ui)
 
   # Wrap ui in body tag if it doesn't already have a single top-level body tag.
-  if (!(inherits(ui, "shiny.tag") && ui$name == "body"))
-    ui <- tags$body(ui)
+  #if (!(inherits(ui, "shiny.tag") && ui$name == "body"))
+  #  ui <- tags$body(ui)
 
   result <- renderTags(ui)
 
