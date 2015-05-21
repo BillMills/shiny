@@ -54,17 +54,6 @@ renderPage <- function(ui, connection, showcase=0) {
   # write preamble
   writeLines(c('<html>',
                '<head>',
-               '  <meta http-equiv="Content-Type" content="application/json; charset=utf-8"/>',
-               sprintf('  <script type="application/shiny-singletons">%s</script>',
-                       paste(result$singletons, collapse = ',')
-               ),
-               sprintf('  <script type="application/html-dependencies">%s</script>',
-                       depStr
-               ),
-               depHtml
-              ),
-              con = connection)
-  writeLines(c(result$head,
                '</head>',
                recursive=TRUE),
              con = connection)
