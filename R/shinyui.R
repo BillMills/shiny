@@ -51,19 +51,11 @@ renderPage <- function(ui, connection, showcase=0) {
   }), collapse = ";")
   depHtml <- renderDependencies(deps, "href")
 
-  # write preamble
-  writeLines(c('<html>',
-               '<head>',
-               '<meta content=application/json>',
-               '</head>',
-               recursive=TRUE),
-             con = connection)
+
 
   writeLines(result$html, con = connection)
 
-  # write end document
-  writeLines('</html>',
-             con = connection)
+
 }
 
 #' Create a Shiny UI handler
