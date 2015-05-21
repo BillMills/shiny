@@ -54,7 +54,7 @@ renderPage <- function(ui, connection, showcase=0) {
   # write preamble
   writeLines(c('<html>',
                '<head>',
-               '<meta content=application/json>'
+               '<meta content=application/json>',
                '</head>',
                recursive=TRUE),
              con = connection)
