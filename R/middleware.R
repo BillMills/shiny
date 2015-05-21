@@ -15,7 +15,7 @@
 #
 ## ------------------------------------------------------------------------
 httpResponse <- function(status = 200,
-                         content_type = "text/html; charset=UTF-8",
+                         content_type = "application/json; charset=UTF-8",
                          content = "",
                          headers = list()) {
   # Make sure it's a list, not a vector
